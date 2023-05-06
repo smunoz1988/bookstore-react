@@ -24,7 +24,6 @@ const RenderList = () => {
         progress={progress}
         chapter={chapter}
       />
-      <p>test</p>
     </div>
   );
 };
