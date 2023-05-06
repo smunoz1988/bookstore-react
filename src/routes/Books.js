@@ -1,9 +1,10 @@
 import NewBook from '../components/NewBookForm';
+import RenderList from '../components/BookList';
 
 const Books = () => (
   <>
     <div>
-      <p>aqui van los libros</p>
+      <RenderList />
     </div>
 
     <NewBook />
