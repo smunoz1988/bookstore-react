@@ -30,7 +30,7 @@
 
 # 📖 Bookstore-React <a name="about-project"></a>
 
-> In this project, I build a basic React website.
+> In this project, I build a basic React website using Redux.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
