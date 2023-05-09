@@ -9,6 +9,7 @@ const NewBook = () => {
     item_id: '',
     title: '',
     author: '',
+    category: '',
   });
 
   const onInputChange = ({ target }) => {
@@ -34,8 +35,16 @@ const NewBook = () => {
       item_id: '',
       title: '',
       author: '',
+      category: '',
     });
   };
+
+  const categories = [
+    'science-fiction',
+    'horror',
+    'action',
+    'romance',
+  ];
 
   return (
     <>
@@ -44,6 +53,15 @@ const NewBook = () => {
         <form className="form" onSubmit={onSubmit}>
           <input type="text" placeholder="book title" value={formValues.title} name="title" onChange={onInputChange} />
           <input type="text" placeholder="book author" value={formValues.author} name="author" onChange={onInputChange} />
+          <select name="category" placeholder="Choose one..." value={formValues.category} onChange={onInputChange}>
+            <option value="">Choose one...</option>
+            {categories.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+
           <button className="btn-submit" type="submit">
             Add Book
           </button>
