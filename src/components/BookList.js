@@ -1,30 +1,21 @@
+import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
 
 const RenderList = () => {
-  const list = [
-    {
-      category: 'Science Fiction',
-      title: 'Dune',
-      author: 'Frank Herbert',
-      progress: '65%',
-      chapter: 'Chapter 9',
-    },
-  ];
-
-  const {
-    category, title, author, progress, chapter,
-  } = list[0];
+  const { bookList } = useSelector((store) => store.book);
 
   return (
-    <div>
-      <BookItem
-        category={category}
-        title={title}
-        author={author}
-        progress={progress}
-        chapter={chapter}
-      />
-    </div>
+    <>
+      {bookList.map((book) => (
+        <BookItem
+          key={book.item_id}
+          item_id={book.item_id}
+          title={book.title}
+          author={book.author}
+          category={book.category}
+        />
+      ))}
+    </>
   );
 };
 
