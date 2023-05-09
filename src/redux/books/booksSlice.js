@@ -11,7 +11,6 @@ export const bookSlice = createSlice({
   reducers: {
     addBook: (state, action) => {
       state.bookList.push(action.payload);
-      console.log(bookItems);
     },
     removeBook: (state, action) => {
       const itemId = action.payload;

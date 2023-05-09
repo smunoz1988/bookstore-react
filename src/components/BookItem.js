@@ -5,7 +5,7 @@ import '../styles/BookItem.css';
 
 const BookItem = (
   {
-    item_id, title, author, category,
+    item_id, title, author, category, // eslint-disable-line
   },
 ) => {
   const dispatch = useDispatch();

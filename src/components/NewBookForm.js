@@ -1,12 +1,12 @@
+import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { addBook } from '../redux/books/booksSlice';
 
 const NewBook = () => {
   const dispatch = useDispatch();
-  const [formSubmitted, setformSubmitted] = useState(false);
   const [formValues, setformValues] = useState({
-    item_id: '1',
+    item_id: '',
     title: '',
     author: '',
   });
@@ -20,16 +20,21 @@ const NewBook = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    setformSubmitted(true);
 
     if (formValues.title.trim().length <= 0 || formValues.author.trim().length <= 0) {
-      setformSubmitted(false);
       return;
     }
 
-    dispatch(addBook(formValues));
+    dispatch(addBook({
+      ...formValues,
+      item_id: uuidv4(),
+    }));
 
-    setformSubmitted(false);
+    setformValues({
+      item_id: '',
+      title: '',
+      author: '',
+    });
   };
 
   return (
@@ -49,21 +54,3 @@ const NewBook = () => {
 };
 
 export default NewBook;
-
-// const NewBook = () => (
-//   <>
-//     <p>Add New Book</p>
-//     <form>
-//       <input type="text" placeholder="Book title" />
-//       <input type="text" placeholder="Book Author" />
-//       <select id="cars">
-//         <option value="" hidden>Select Category</option>
-//         <option value="author-1">Category 1</option>
-//         <option value="author-2">category 2</option>
-//       </select>
-//       <button type="button">Add Book</button>
-//     </form>
-//   </>
-// );
-
-// export default NewBook;
