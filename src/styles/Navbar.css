@@ -2,9 +2,10 @@
 
 nav {
   display: flex;
-  margin: 1.813rem 6.25rem 1.813rem 6.25rem;
+  padding: 0 6.25rem 0 6.25rem;
   justify-content: space-between;
   align-items: center;
+  background-color: #ffffff;
 }
 
 .navTitle {

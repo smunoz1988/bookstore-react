@@ -34,22 +34,23 @@ const BookItem = (
     <>
       <div className="flexRow listContainer">
         <div>
-          <p>{category}</p>
-          <p>{title}</p>
-          <p>{author}</p>
-          <button type="button">Comments</button>
+          <p className="categoryBook">{category}</p>
+          <p className="titleBook">{title}</p>
+          <p className="autorBook">{author}</p>
+          <button type="button" className="autorBook itemBts">Comments</button>
           <button
             type="button"
             onClick={handleDelete}
+            className="autorBook itemBts"
           >
             Remove
           </button>
-          <button type="button">Edit</button>
+          <button type="button" className="autorBook itemBts">Edit</button>
         </div>
         <p>25%</p>
         <div>
           <p>Chapter 2</p>
-          <button type="button">Update Progress</button>
+          <button type="button" className="autorBook itemBts">Update Progress</button>
         </div>
       </div>
     </>
