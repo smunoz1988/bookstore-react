@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { postBook } from '../redux/books/booksSlice';
+import { postBook, getBooks } from '../redux/books/booksSlice';
 
 const NewBook = () => {
   const categories = [
@@ -10,34 +10,54 @@ const NewBook = () => {
     'action',
     'romance'];
   const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    getBooks();
+  }, [dispatch]);
+
   const [formValues, setformValues] = useState({
     title: '',
     author: '',
     categores: '',
     item_id: '',
   });
+
   const onInputChange = ({ target }) => {
     setformValues({
       ...formValues,
       [target.name]: target.value,
     });
   };
+
   const onSubmit = (event) => {
     event.preventDefault();
     if (formValues.title.trim().length <= 0 || formValues.author.trim().length <= 0) {
       return;
     }
+
+    setIsLoading(true);
     dispatch(postBook({
       ...formValues,
       item_id: uuidv4(),
-    }));
-    setformValues({
-      title: '',
-      author: '',
-      item_id: '',
-      category: '',
+    })).then(() => {
+      setIsLoading(false);
+      setformValues({
+        title: '',
+        author: '',
+        item_id: '',
+        category: '',
+      });
+      dispatch(getBooks());
+    }).catch(() => {
+      setIsLoading(false);
     });
   };
+
+  if (isLoading) {
+    return <div>Loading</div>;
+  }
+
   return (
     <>
       <div className="form-container">
