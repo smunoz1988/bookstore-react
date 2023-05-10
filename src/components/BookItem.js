@@ -1,7 +1,8 @@
 import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/BookItem.css';
-import { deleteBook } from '../redux/books/booksSlice';
+import { deleteBook, getBooks } from '../redux/books/booksSlice';
 
 const BookItem = (
   {
@@ -9,13 +10,25 @@ const BookItem = (
   },
 ) => {
   const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    getBooks();
+  }, [dispatch]);
 
   const handleDelete = () => {
-    console.log('delete');
-    console.log('itemId', item_id);
-    console.log('author', author);
-    dispatch(deleteBook(item_id));
+    setIsLoading(true);
+    dispatch(deleteBook(item_id)).then(() => {
+    setIsLoading(false);
+    dispatch(getBooks());
+  }).catch(() => {
+    setIsLoading(false);
+  });
   };
+
+  if (isLoading) {
+    return <div>Loading</div>;
+  }
 
   return (
     <>
