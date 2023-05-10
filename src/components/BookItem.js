@@ -19,11 +19,11 @@ const BookItem = (
   const handleDelete = () => {
     setIsLoading(true);
     dispatch(deleteBook(item_id)).then(() => {
-    setIsLoading(false);
-    dispatch(getBooks());
-  }).catch(() => {
-    setIsLoading(false);
-  });
+      setIsLoading(false);
+      dispatch(getBooks());
+    }).catch(() => {
+      setIsLoading(false);
+    });
   };
 
   if (isLoading) {
