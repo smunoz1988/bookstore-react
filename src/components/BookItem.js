@@ -41,13 +41,14 @@ const BookItem = (
           <button
             type="button"
             onClick={handleDelete}
-            className="autorBook itemBts"
+            className="autorBook itemBts removeBtn edit"
           >
             Remove
           </button>
-          <button type="button" className="autorBook itemBts">Edit</button>
+          <button type="button" className="autorBook itemBts edit">Edit</button>
         </div>
-        <p>25%</p>
+        <div className="progressCircle"> </div>
+        <p>75%</p>
         <div>
           <p>Chapter 2</p>
           <button type="button" className="autorBook itemBts">Update Progress</button>
