@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/BookItem.css';
+import { deleteBook, getBooks } from '../redux/books/booksSlice';
 
 const BookItem = (
   {
@@ -9,6 +10,26 @@ const BookItem = (
   },
 ) => {
   const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    getBooks();
+  }, [dispatch]);
+
+  const handleDelete = () => {
+    setIsLoading(true);
+    dispatch(deleteBook(item_id)).then(() => {
+      setIsLoading(false);
+      dispatch(getBooks());
+    }).catch(() => {
+      setIsLoading(false);
+    });
+  };
+
+  if (isLoading) {
+    return <div>Loading</div>;
+  }
+
   return (
     <>
       <div className="flexRow listContainer">
@@ -19,9 +40,7 @@ const BookItem = (
           <button type="button">Comments</button>
           <button
             type="button"
-            onClick={() => {
-              dispatch(removeBook(item_id));
-            }}
+            onClick={handleDelete}
           >
             Remove
           </button>
@@ -34,7 +53,6 @@ const BookItem = (
         </div>
       </div>
     </>
-
   );
 };
 

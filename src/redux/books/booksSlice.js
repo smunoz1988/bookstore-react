@@ -1,8 +1,41 @@
-import { createSlice } from '@reduxjs/toolkit';
-import bookItems from '../../helpers/bookList';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/1m9Nqcob22NpZzavLMw6/books';
+
+export const getBooks = createAsyncThunk('book/getBooks', async () => {
+  try {
+    const resp = await axios(url);
+    return resp.data;
+  } catch (error) {
+    return error;
+  }
+});
+
+export const postBook = createAsyncThunk('book/postBooks', async (bookData) => {
+  try {
+    const response = await axios({
+      method: 'post',
+      url,
+      data: bookData,
+    });
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+});
+
+export const deleteBook = createAsyncThunk('book/deleteBooks', async (id) => {
+  try {
+    const response = await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/1m9Nqcob22NpZzavLMw6/books/${id}`);
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+});
 
 const initialState = {
-  bookList: bookItems,
+  bookList: [],
 };
 
 export const bookSlice = createSlice({
@@ -15,6 +48,18 @@ export const bookSlice = createSlice({
     removeBook: (state, action) => {
       const itemId = action.payload;
       state.bookList = state.bookList.filter((book) => book.item_id !== itemId);
+    },
+  },
+  extraReducers: {
+    [getBooks.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [getBooks.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.bookList = action.payload;
+    },
+    [getBooks.rejected]: (state) => {
+      state.isLoading = false;
     },
   },
 });
