@@ -12,13 +12,22 @@ export const getBooks = createAsyncThunk('book/getBooks', async () => {
   }
 });
 
-export const postBook = createAsyncThunk('book/getBooks', async (bookData) => {
+export const postBook = createAsyncThunk('book/postBooks', async (bookData) => {
   try {
     const response = await axios({
       method: 'post',
       url,
       data: bookData,
     });
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+});
+
+export const deleteBook = createAsyncThunk('book/deleteBooks', async (id) => {
+  try {
+    const response = await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/1m9Nqcob22NpZzavLMw6/books/${id}`);
     return response.data;
   } catch (error) {
     return error;

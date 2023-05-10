@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import PropTypes from 'prop-types';
 import '../styles/BookItem.css';
+import { deleteBook } from '../redux/books/booksSlice';
 
 const BookItem = (
   {
@@ -9,6 +9,14 @@ const BookItem = (
   },
 ) => {
   const dispatch = useDispatch();
+
+  const handleDelete = () => {
+    console.log('delete');
+    console.log('itemId', item_id);
+    console.log('author', author);
+    dispatch(deleteBook(item_id));
+  };
+
   return (
     <>
       <div className="flexRow listContainer">
@@ -19,9 +27,7 @@ const BookItem = (
           <button type="button">Comments</button>
           <button
             type="button"
-            onClick={() => {
-              dispatch(removeBook(item_id));
-            }}
+            onClick={handleDelete}
           >
             Remove
           </button>
@@ -34,7 +40,6 @@ const BookItem = (
         </div>
       </div>
     </>
-
   );
 };
 

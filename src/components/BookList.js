@@ -12,12 +12,27 @@ const RenderList = () => {
     dispatch(getBooks());
   }, [dispatch]);
 
-  const allBooks = Object.values(bookList).flat();
+  const keys = Object.keys(bookList);
+  const bookData = keys.map((key) => {
+    const bookInfo = bookList[key][0];
+    return {
+      key,
+      author: bookInfo.author,
+      title: bookInfo.title,
+      category: bookInfo.category,
+    };
+  });
 
   return (
     <>
-      {allBooks.map((book) => (
-        <BookItem key={book.item_id} {...book} />
+      {bookData.map((book) => (
+        <BookItem
+          key={book.key}
+          item_id={book.key}
+          author={book.author}
+          title={book.title}
+          category={book.category}
+        />
       ))}
     </>
   );
