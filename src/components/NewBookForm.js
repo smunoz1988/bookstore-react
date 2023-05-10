@@ -5,10 +5,10 @@ import { postBook, getBooks } from '../redux/books/booksSlice';
 
 const NewBook = () => {
   const categories = [
-    'science-fiction',
-    'horror',
-    'action',
-    'romance'];
+    'Science-Fiction',
+    'Horror',
+    'Action',
+    'Romance'];
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
 
