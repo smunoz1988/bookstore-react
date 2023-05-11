@@ -14,6 +14,10 @@
   border-radius: 4px;
 }
 
+.bookData {
+  text-align: center;
+}
+
 .categoryBook {
   margin: 0;
   opacity: 0.5;
@@ -28,7 +32,6 @@
 }
 
 .titleBook {
-  width: 12.313rem;
   height: 1.813rem;
   margin: 0.2rem 0 0 0;
   font-family: 'Roboto Slab', serif;
@@ -170,6 +173,14 @@
 
   .listContainer {
     padding: 2.063rem 5rem 1.75rem 1.688rem;
+  }
+
+  .titleBook {
+    width: 12.313rem;
+  }
+
+  .bookData {
+    text-align: left;
   }
 
   .progressContainer {
