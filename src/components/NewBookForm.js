@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { postBook, getBooks } from '../redux/books/booksSlice';
+import '../styles/NewBook.css';
 
 const NewBook = () => {
   const categories = [
@@ -61,7 +62,7 @@ const NewBook = () => {
   return (
     <>
       <div className="form-container">
-        <h3>Add new Book</h3>
+        <h3>ADD NEW BOOK</h3>
         <form className="form" onSubmit={onSubmit}>
           <input
             type="text"
@@ -78,7 +79,7 @@ const NewBook = () => {
             onChange={onInputChange}
           />
           <select name="category" placeholder="Choose one..." value={formValues.category} onChange={onInputChange}>
-            <option value="">Choose one...</option>
+            <option value="">Category</option>
             {categories.map((category) => (
               <option key={category} value={category}>
                 {category}
