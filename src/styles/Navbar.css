@@ -2,6 +2,7 @@
 
 nav {
   display: flex;
+  flex-direction: column;
   padding: 0 6.25rem 0 6.25rem;
   justify-content: space-between;
   align-items: center;
@@ -11,6 +12,7 @@ nav {
 .navTitle {
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
 .navItems {
@@ -48,4 +50,14 @@ h1 {
   border: solid 1px #e8e8e8;
   border-radius: 45rem;
   padding: 0.875rem;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    flex-direction: row;
+  }
+
+  .navTitle {
+    flex-direction: row;
+  }
 }
