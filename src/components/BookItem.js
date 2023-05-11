@@ -57,8 +57,8 @@ const BookItem = (
           </div>
           <div className="chapterContainer">
             <p className="currentChap">CURRENT CHAPTER</p>
-            <p className="chapter">Chapter 2</p>
-            <button type="button" className="autorBook itemBts updateBtn">Update Progress</button>
+            <p className="chapter">Chapter 2: Into the wild</p>
+            <button type="button" className="autorBook itemBts updateBtn">UPDATE PROGRESS</button>
           </div>
         </div>
       </div>
