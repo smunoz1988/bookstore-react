@@ -1,3 +1,5 @@
+import '../styles/NewBook.css';
+
 const Categories = () => (
   <div>
     <p>Here will go the Categories</p>
