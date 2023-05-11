@@ -74,7 +74,7 @@ const NewBook = () => {
           />
           <input
             type="text"
-            className="inputCase"
+            className="inputCase authorCase"
             placeholder="Book author"
             value={formValues.author}
             name="author"
