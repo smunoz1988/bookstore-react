@@ -47,11 +47,19 @@ const BookItem = (
           </button>
           <button type="button" className="autorBook itemBts edit">Edit</button>
         </div>
-        <div className="progressCircle"> </div>
-        <p>75%</p>
-        <div>
-          <p>Chapter 2</p>
-          <button type="button" className="autorBook itemBts">Update Progress</button>
+        <div className="flexRow">
+          <div className="flexRow progressContainer">
+            <div className="progressCircle"> </div>
+            <div className="completedContainer">
+              <p className="porcentage">75%</p>
+              <p className="completed">Completed</p>
+            </div>
+          </div>
+          <div className="chapterContainer">
+            <p className="currentChap">CURRENT CHAPTER</p>
+            <p>Chapter 2</p>
+            <button type="button" className="autorBook itemBts">Update Progress</button>
+          </div>
         </div>
       </div>
     </>
