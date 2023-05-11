@@ -2,12 +2,13 @@
 
 .flexRow {
   display: flex;
+  flex-direction: column;
 }
 
 .listContainer {
   justify-content: space-between;
   border: solid 1px #e8e8e8;
-  padding: 2.063rem 5rem 1.75rem 1.688rem;
+  padding: 1rem;
   background-color: #ffffff;
   margin-bottom: 0.938rem;
   border-radius: 4px;
@@ -88,10 +89,10 @@
 
 .progressContainer {
   align-items: center;
-  border-right: solid 0.125rem #e8e8e8;
   height: 4.375rem;
-  margin: auto;
+  margin: 2rem 2rem 2rem 2rem;
   padding-right: 4rem;
+  flex-direction: row;
 }
 
 .porcentage {
@@ -160,4 +161,19 @@
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .flexRow {
+    flex-direction: row;
+  }
+
+  .listContainer {
+    padding: 2.063rem 5rem 1.75rem 1.688rem;
+  }
+
+  .progressContainer {
+    margin: auto;
+    border-right: solid 0.125rem #e8e8e8;
+  }
 }
