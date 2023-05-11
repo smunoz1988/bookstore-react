@@ -60,7 +60,7 @@
 
 ### Live Demo <a name="live-demo"></a>
 
-Netlify: https://bookstore-6q6x.onrender.com/Books
+Netlify: https://bookstore-6q6x.onrender.com/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
