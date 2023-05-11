@@ -6,7 +6,7 @@ nav {
   padding: 0.5rem;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .navTitle {
@@ -66,6 +66,7 @@ h1 {
   nav {
     padding: 0 6.25rem 0 6.25rem;
   }
+
   .navItems {
     padding-left: 2.563rem;
     margin-bottom: 0;
