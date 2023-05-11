@@ -67,7 +67,7 @@ const NewBook = () => {
           <input
             className="inputCase"
             type="text"
-            placeholder="book title"
+            placeholder="Book title"
             value={formValues.title}
             name="title"
             onChange={onInputChange}
@@ -75,7 +75,7 @@ const NewBook = () => {
           <input
             type="text"
             className="inputCase"
-            placeholder="book author"
+            placeholder="Book author"
             value={formValues.author}
             name="author"
             onChange={onInputChange}

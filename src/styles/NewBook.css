@@ -45,6 +45,7 @@ h3 {
 .selector {
   color: #c4c4c4;
   margin: 0 2.125rem 0 2.125rem;
+  font-size: 1rem;
 }
 
 .addBookContainer {
