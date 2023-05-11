@@ -92,10 +92,9 @@
 
 .progressContainer {
   align-items: center;
-  height: 4.375rem;
+  height: 8.75rem;
   margin: 2rem 2rem 2rem 2rem;
-  padding-right: 4rem;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .porcentage {
@@ -108,6 +107,7 @@
   letter-spacing: normal;
   color: #121212;
   margin: 0;
+  padding-top: 1rem;
 }
 
 .completed {
@@ -187,5 +187,12 @@
   .progressContainer {
     margin: auto;
     border-right: solid 0.125rem #e8e8e8;
+    height: 4.375rem;
+    flex-direction: row;
+    padding-right: 4rem;
+  }
+
+    .porcentage {
+    padding-top: 0;
   }
 }
