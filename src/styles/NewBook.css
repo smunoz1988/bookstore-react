@@ -5,6 +5,12 @@
   border-top: solid 0.125rem #e8e8e8;
 }
 
+form {
+  display: flex;
+  justify-content: space-between;
+  height: 2.813rem;
+}
+
 h3 {
   margin: 1.813rem 32.75rem 1.188rem 0;
   font-family: 'Montserrat', sans-serif;
@@ -26,4 +32,39 @@ h3 {
   line-height: normal;
   letter-spacing: -0.15px;
   color: #c4c4c4;
+}
+
+.inputCase {
+  width: 30%;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  padding-left: 1.063rem;
+}
+
+.selector {
+  color: #c4c4c4;
+  margin: 0 2.125rem 0 2.125rem;
+}
+
+.addBookContainer {
+  width: 11.5rem
+}
+
+.btn-submit {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: RobotoSlab;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border: none;
 }

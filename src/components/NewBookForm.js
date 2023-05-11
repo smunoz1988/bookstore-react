@@ -65,6 +65,7 @@ const NewBook = () => {
         <h3>ADD NEW BOOK</h3>
         <form className="form" onSubmit={onSubmit}>
           <input
+            className="inputCase"
             type="text"
             placeholder="book title"
             value={formValues.title}
@@ -73,12 +74,13 @@ const NewBook = () => {
           />
           <input
             type="text"
+            className="inputCase"
             placeholder="book author"
             value={formValues.author}
             name="author"
             onChange={onInputChange}
           />
-          <select name="category" placeholder="Choose one..." value={formValues.category} onChange={onInputChange}>
+          <select name="category" placeholder="Choose one..." className="inputCase selector" value={formValues.category} onChange={onInputChange}>
             <option value="">Category</option>
             {categories.map((category) => (
               <option key={category} value={category}>
@@ -86,9 +88,11 @@ const NewBook = () => {
               </option>
             ))}
           </select>
-          <button className="btn-submit" type="submit">
-            Add Book
-          </button>
+          <div className="addBookContainer">
+            <button className="btn-submit" type="submit">
+              ADD BOOK
+            </button>
+          </div>
         </form>
       </div>
     </>
