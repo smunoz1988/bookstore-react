@@ -1,0 +1,11 @@
+.underConstruction {
+  width: 10rem;
+  height: auto;
+}
+
+.constructionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
