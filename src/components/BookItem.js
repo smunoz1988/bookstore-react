@@ -34,22 +34,32 @@ const BookItem = (
     <>
       <div className="flexRow listContainer">
         <div>
-          <p>{category}</p>
-          <p>{title}</p>
-          <p>{author}</p>
-          <button type="button">Comments</button>
+          <p className="categoryBook">{category}</p>
+          <p className="titleBook">{title}</p>
+          <p className="autorBook">{author}</p>
+          <button type="button" className="autorBook itemBts">Comments</button>
           <button
             type="button"
             onClick={handleDelete}
+            className="autorBook itemBts removeBtn edit"
           >
             Remove
           </button>
-          <button type="button">Edit</button>
+          <button type="button" className="autorBook itemBts edit">Edit</button>
         </div>
-        <p>25%</p>
-        <div>
-          <p>Chapter 2</p>
-          <button type="button">Update Progress</button>
+        <div className="flexRow">
+          <div className="flexRow progressContainer">
+            <div className="progressCircle"> </div>
+            <div className="completedContainer">
+              <p className="porcentage">75%</p>
+              <p className="completed">Completed</p>
+            </div>
+          </div>
+          <div className="chapterContainer">
+            <p className="currentChap">CURRENT CHAPTER</p>
+            <p className="chapter">Chapter 2: Into the wild</p>
+            <button type="button" className="autorBook itemBts updateBtn">UPDATE PROGRESS</button>
+          </div>
         </div>
       </div>
     </>

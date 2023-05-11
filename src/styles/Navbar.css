@@ -1,11 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+
 nav {
   display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
 }
 
 .navTitle {
   display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .navItems {
-  padding-left: 1rem;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-family: 'Montserrat', sans-serif;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.categorieLink {
+  opacity: 0.5;
+}
+
+h1 {
+  color: #0290ff;
+  font-weight: bold;
+  font-size: 1.875rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.userIcon {
+  width: 1.063rem;
+  height: 1.063rem;
+  color: #0290ff;
+  border: solid 1px #e8e8e8;
+  border-radius: 45rem;
+  padding: 0.875rem;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    flex-direction: row;
+  }
+
+  .navTitle {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    padding: 0 6.25rem 0 6.25rem;
+  }
+
+  .navItems {
+    padding-left: 2.563rem;
+    margin-bottom: 0;
+  }
 }

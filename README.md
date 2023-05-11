@@ -50,14 +50,17 @@
 ### Key Features <a name="key-features"></a>
 
 > Here are some key features of the application :
+
 - **Use of react router**
+- **Use redux reducers**
+- **fetch data from external API**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Live Demo <a name="live-demo"></a>
 
-project will be deployed in the future
+Netlify: https://bookstore-6q6x.onrender.com/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -154,8 +157,8 @@ project will be deployed in the future.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Style
-- Functionality to add and remove Books
+- Add Categories
+- Add functionality to chapter and progress
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

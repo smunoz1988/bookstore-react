@@ -2,13 +2,14 @@ import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { postBook, getBooks } from '../redux/books/booksSlice';
+import '../styles/NewBook.css';
 
 const NewBook = () => {
   const categories = [
-    'science-fiction',
-    'horror',
-    'action',
-    'romance'];
+    'Science-Fiction',
+    'Horror',
+    'Action',
+    'Romance'];
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -61,33 +62,37 @@ const NewBook = () => {
   return (
     <>
       <div className="form-container">
-        <h3>Add new Book</h3>
+        <h3>ADD NEW BOOK</h3>
         <form className="form" onSubmit={onSubmit}>
           <input
+            className="inputCase"
             type="text"
-            placeholder="book title"
+            placeholder="Book title"
             value={formValues.title}
             name="title"
             onChange={onInputChange}
           />
           <input
             type="text"
-            placeholder="book author"
+            className="inputCase authorCase"
+            placeholder="Book author"
             value={formValues.author}
             name="author"
             onChange={onInputChange}
           />
-          <select name="category" placeholder="Choose one..." value={formValues.category} onChange={onInputChange}>
-            <option value="">Choose one...</option>
+          <select name="category" placeholder="Choose one..." className="inputCase selector" value={formValues.category} onChange={onInputChange}>
+            <option value="">Category</option>
             {categories.map((category) => (
               <option key={category} value={category}>
                 {category}
               </option>
             ))}
           </select>
-          <button className="btn-submit" type="submit">
-            Add Book
-          </button>
+          <div className="addBookContainer">
+            <button className="btn-submit" type="submit">
+              ADD BOOK
+            </button>
+          </div>
         </form>
       </div>
     </>

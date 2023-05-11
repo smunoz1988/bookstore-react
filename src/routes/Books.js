@@ -1,9 +1,10 @@
 import NewBook from '../components/NewBookForm';
 import RenderList from '../components/BookList';
+import '../styles/BooksContainer.css';
 
 const Books = () => (
   <>
-    <div>
+    <div className="booksContainerSection">
       <RenderList />
     </div>
 
