@@ -22,6 +22,7 @@ h3 {
   line-height: normal;
   letter-spacing: -0.18px;
   color: #888;
+  text-align: center;
 }
 
 ::placeholder {
@@ -36,11 +37,12 @@ h3 {
 }
 
 .inputCase {
-  width: 80%;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
-  padding-left: 1.063rem;
+  padding: 1.063rem;
+  width: 80%;
+  margin: auto;
 }
 
 .selector {
@@ -49,7 +51,8 @@ h3 {
 }
 
 .addBookContainer {
-  width: 11.5rem;
+  width: 80%;
+  margin: auto;
 }
 
 .authorCase {
@@ -79,6 +82,7 @@ h3 {
 @media screen and (min-width: 768px) {
   h3 {
     margin: 1.813rem 32.75rem 1.188rem 0;
+    text-align: left;
   }
 
   form {
@@ -87,6 +91,8 @@ h3 {
 
   .inputCase {
     width: 30%;
+    margin: 0;
+    padding: 0;
   }
 
   .authorCase {
@@ -97,6 +103,10 @@ h3 {
 
   .selector {
     margin: 0 2.125rem 0 2.125rem;
+  }
+
+  .addBookContainer {
+    width: 11.5rem;
   }
 
   .btn-submit {

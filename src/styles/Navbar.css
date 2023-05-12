@@ -50,6 +50,7 @@ h1 {
   border: solid 1px #e8e8e8;
   border-radius: 45rem;
   padding: 0.875rem;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
