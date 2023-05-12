@@ -14,6 +14,10 @@
   border-radius: 4px;
 }
 
+.bookData {
+  text-align: center;
+}
+
 .categoryBook {
   margin: 0;
   opacity: 0.5;
@@ -28,9 +32,8 @@
 }
 
 .titleBook {
-  width: 12.313rem;
   height: 1.813rem;
-  margin: 0.2rem 0 0 0;
+  margin: 0.5rem 0 0.5rem 0;
   font-family: 'Roboto Slab', serif;
   font-size: 1.375rem;
   font-weight: bold;
@@ -89,10 +92,9 @@
 
 .progressContainer {
   align-items: center;
-  height: 4.375rem;
+  height: 8.75rem;
   margin: 2rem 2rem 2rem 2rem;
-  padding-right: 4rem;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .porcentage {
@@ -105,6 +107,8 @@
   letter-spacing: normal;
   color: #121212;
   margin: 0;
+  padding-top: 1rem;
+  padding-left: 0.5rem;
 }
 
 .completed {
@@ -118,6 +122,7 @@
   letter-spacing: normal;
   color: #121212;
   margin: 0;
+  padding-right: 1.5rem;
 }
 
 .currentChap {
@@ -133,8 +138,11 @@
   color: #121212;
 }
 
+.chapterContainer {
+  text-align: center;
+}
+
 .chapter {
-  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
   font-family: 'Roboto Slab', serif;
   font-size: 1rem;
   font-weight: 300;
@@ -148,7 +156,7 @@
 .updateBtn {
   width: 11.5rem;
   height: 2.063rem;
-  margin: 0.75rem 0 0.563rem 3.688rem;
+  margin: 0;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
   border-radius: 3px;
   background-color: #0290ff;
@@ -172,8 +180,40 @@
     padding: 2.063rem 5rem 1.75rem 1.688rem;
   }
 
+  .titleBook {
+    width: 12.313rem;
+    margin: 0.2rem 0 0 0;
+  }
+
+  .bookData {
+    text-align: left;
+  }
+
   .progressContainer {
     margin: auto;
     border-right: solid 0.125rem #e8e8e8;
+    height: 4.375rem;
+    flex-direction: row;
+    padding-right: 4rem;
+  }
+
+  .porcentage {
+    padding: 0 0 0 0.5rem;
+  }
+
+  .completed {
+    padding-right: 0;
+  }
+
+  .chapterContainer {
+    text-align: left;
+  }
+
+  .chapter {
+    margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  }
+
+  .updateBtn {
+    margin: 0.75rem 0 0.563rem 3.688rem;
   }
 }

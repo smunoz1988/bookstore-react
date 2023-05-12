@@ -33,7 +33,7 @@ const BookItem = (
   return (
     <>
       <div className="flexRow listContainer">
-        <div>
+        <div className="bookData">
           <p className="categoryBook">{category}</p>
           <p className="titleBook">{title}</p>
           <p className="autorBook">{author}</p>

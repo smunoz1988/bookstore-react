@@ -77,10 +77,6 @@ h3 {
 }
 
 @media screen and (min-width: 768px) {
-  .form-container {
-    margin: 2.375rem 6.25rem 2.375rem 6.25rem;
-  }
-
   h3 {
     margin: 1.813rem 32.75rem 1.188rem 0;
   }
@@ -105,5 +101,11 @@ h3 {
 
   .btn-submit {
     margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .form-container {
+    margin: 2.375rem 6.25rem 2.375rem 6.25rem;
   }
 }
