@@ -108,6 +108,7 @@
   color: #121212;
   margin: 0;
   padding-top: 1rem;
+  padding-left: 0.5rem;
 }
 
 .completed {
@@ -121,6 +122,7 @@
   letter-spacing: normal;
   color: #121212;
   margin: 0;
+  padding-right: 1.5rem;
 }
 
 .currentChap {
@@ -136,8 +138,11 @@
   color: #121212;
 }
 
+.chapterContainer {
+  text-align: center;
+}
+
 .chapter {
-  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
   font-family: 'Roboto Slab', serif;
   font-size: 1rem;
   font-weight: 300;
@@ -151,7 +156,7 @@
 .updateBtn {
   width: 11.5rem;
   height: 2.063rem;
-  margin: 0.75rem 0 0.563rem 3.688rem;
+  margin: 0;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
   border-radius: 3px;
   background-color: #0290ff;
@@ -192,7 +197,23 @@
     padding-right: 4rem;
   }
 
-    .porcentage {
-    padding-top: 0;
+  .porcentage {
+    padding: 0 0 0 0.5rem;
+  }
+
+  .completed {
+    padding-right: 0;
+  }
+
+  .chapterContainer {
+    text-align: left;
+  }
+
+  .chapter {
+    margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  }
+
+  .updateBtn {
+    margin: 0.75rem 0 0.563rem 3.688rem;
   }
 }
