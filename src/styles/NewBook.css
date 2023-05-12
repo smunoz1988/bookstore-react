@@ -92,7 +92,7 @@ h3 {
   .inputCase {
     width: 30%;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 0.5rem;
   }
 
   .authorCase {
